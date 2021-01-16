@@ -1,13 +1,12 @@
 # gameport_flightstick
 An overengineered gameport compatible flightstick for Retro PCs.
 
-It's becoming more and more hard to find good and reliable gameport
-joysticks/flightsticks to play those old games using original hardware.
+As it become more and more hard to find good and reliable gameport 
+joysticks/flightsticks to play those old games using original hardware, 
+I tried to make my own gameport joystick that use hall effect sensors 
+instead of those unreliable 100K potentiometers.
 
-This project started as a try to make my own gameport joystick using
-hall effect sensors instead of those unreliable 100K potentiometers.
-The circuit make use of MCP41100 ICs to replace the 100K potentiometers
-and make the device as reliable as possible.
+The circuit make use of MCP41100 ICs to replace the 100K potentiometers. 
 
 The microcontroler (Arduino Nano v3) code have noise reduction,
 "cubic curve" axis smoothing and calibration routine, that saves the
