@@ -2,7 +2,7 @@
 An overengineered gameport compatible flightstick for Retro PCs.
 
 As it becomes more and more hard to find good and reliable gameport 
-joysticks/flightsticks to play those old games on the original hardware, 
+joysticks/flightsticks to play those old games on original hardware, 
 I tried to make my own gameport joystick that uses hall effect sensors 
 instead of those unreliable potentiometers.
 
