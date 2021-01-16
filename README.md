@@ -17,5 +17,7 @@ Release the buttons and move all the 4 axis to it's maximun and minimun position
 To save the calibration press button 3 + button 4.
 To cancel press button 1 + button 2.
 <p align="center">
-  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/flightstick_schem.png?raw=true" width="350" title="Circuit diagram">
+  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/flightstick.png?raw=true" width="350" title="Flightstick">
+  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/circuit_board.png?raw=true" width="350" title="Circuit Board">
+  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/flightstick_schem.png?raw=true" width="350" title="Circuit Diagram">
 </p>
