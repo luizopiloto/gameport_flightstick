@@ -45,12 +45,12 @@ typedef struct {
 
 ranges axRange;
 
-EMA_Filter filterX1(0.4);
-EMA_Filter filterY1(0.4);
+EMA_Filter filterX1(0.5);
+EMA_Filter filterY1(0.5);
 EMA_Filter filterX2(0.5);
-EMA_Filter filterY2(0.4);
+EMA_Filter filterY2(0.5);
 
-Axis_Remap axMap(255);
+Axis_Remap axMap(255, 1);
 
 void spiWrite(int cmd, int data, int csPin) {
   SPI.beginTransaction(SPISettings(10000000, MSBFIRST, SPI_MODE0));

@@ -35,26 +35,36 @@ float EMA_Filter::Get_EMA(int iV) {
  * It creates a lookup table to convert a linear analog input map into a more
  * smooth "cubic curve" map, with slightly less sensitivity close to the center.
  * 
- * uint8_t r is maximum axis range, usually 127 or 255, but can be anything
+ * uint8_t r - The maximum axis range, usually 127 or 255, but can be anything
  * between 0 to 255.
  * 
- * output(uint8_t x) returns the "smoothed" value from the lookup table.
+ * float f - The smoothing curve factor, must be a value greater than 0.
+ * OBS: Anything above 10 results in an almost linear map.
+ * 
+ * remap(float f) - Updates the lookup table using the provided curve factor.
+ * 
+ * output(uint8_t x) - Returns the "smoothed" value from the lookup table.
  * =============================================================================
  */
-Axis_Remap::Axis_Remap(uint8_t r) {
+Axis_Remap::Axis_Remap(uint8_t r, float f) {
   range = r;
-  int midr = round(r / 2);
-  int y;
-  for(int x = 0; x <= range; x++) {
-    y = round((((pow((x - midr), 3) / pow(midr, 2)) + midr) + x) / 2); //Fill the lookup table with a cubic curve.
-    table[x] = (y < 0) ? 0 : ((y > range) ? range : y);
-  }
+  remap(f);
 }
 
 Axis_Remap::~Axis_Remap() {
-  delete[] table; //Free the memory used by the lookup table.
+  delete[] table; //Frees the memory used by the lookup table.
 }
 
 uint8_t Axis_Remap::output(uint8_t x) {
   return table[x];
+}
+
+void Axis_Remap::remap(float f) {
+  factor = (f < 0) ? 0 : f;
+  uint8_t midr = round(range / 2);
+  int16_t y;
+  for(int x = 0; x <= range; x++) {
+    y = round((((pow((x - midr), 3) / pow(midr, 2)) + midr) + (x * factor)) / (1 + factor));
+    table[x] = (y < 0) ? 0 : ((y > range) ? range : y);
+  }
 }
