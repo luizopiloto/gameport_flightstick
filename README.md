@@ -18,7 +18,7 @@ To save the calibration press button 3 + button 4.
 To cancel press button 1 + button 2.
 <p align="center">
   <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/flightstick.png?raw=true" width="350" title="Flightstick">
-  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/circuit_board.png?raw=true" width="350" title="Circuit Board">
+  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/circuit_board.png?raw=true" width="316" title="Circuit Board">
   <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/flightstick_schem.png?raw=true" width="350" title="Circuit Diagram">
-  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/graph_plot.png?raw=true" width="350" title="Axis Graph Plot">
+  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/graph_plot.png?raw=true" width="316" title="Axis Graph Plot">
 </p>
