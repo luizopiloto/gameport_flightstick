@@ -20,4 +20,5 @@ To cancel press button 1 + button 2.
   <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/flightstick.png?raw=true" width="350" title="Flightstick">
   <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/circuit_board.png?raw=true" width="350" title="Circuit Board">
   <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/flightstick_schem.png?raw=true" width="350" title="Circuit Diagram">
+  <img src="https://github.com/luizopiloto/gameport_flightstick/blob/main/graph_plo.png?raw=true" width="350" title="Axis Graph Plot">
 </p>
