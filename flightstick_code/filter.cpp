@@ -62,9 +62,10 @@ uint8_t Axis_Remap::output(uint8_t x) {
 void Axis_Remap::remap(float f) {
   factor = (f < 0) ? 0 : f;
   uint8_t midr = round(range / 2);
+  uint32_t pmidr = pow(midr, 2);
   int16_t y;
   for(int x = 0; x <= range; x++) {
-    y = round((((pow((x - midr), 3) / pow(midr, 2)) + midr) + (x * factor)) / (1 + factor));
+    y = round((((pow((x - midr), 3) / pmidr) + midr) + (x * factor)) / (1 + factor));
     table[x] = (y < 0) ? 0 : ((y > range) ? range : y);
   }
 }
